@@ -17,6 +17,10 @@ func main() {
 		log.Fatal("Укажи флаг --auth или --cleanup")
 	}
 
+	if *auth && *cleanup {
+		log.Fatal("Нужно указать ровно один флаг: либо --auth, либо --cleanup")
+	}
+
 	// Читаем данные из переменной среды
 	accessToken := os.Getenv("R01_ACCESS_TOKEN")
 	domain := os.Getenv("CERTBOT_DOMAIN")
