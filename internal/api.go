@@ -124,7 +124,7 @@ func AddDNSRecord(accessToken string, domainID int, name string, rtype string, t
 }
 
 func DeleteDNSRecord(accessToken string, domainID int, rrId int) error {
-	url := fmt.Sprintf("%s/api/v1/domains/%d/rrecords/rrecords?rrecord_ids=%d", api_base_url, domainID, rrId)
+	url := fmt.Sprintf("%s/api/v1/domains/%d/rrecords/%d", api_base_url, domainID, rrId)
 
 	req, err := http.NewRequest("DELETE", url, nil)
 	if err != nil {

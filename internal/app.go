@@ -59,6 +59,7 @@ func RunAuth(accessToken, domain, validation string) error {
 }
 
 func RunCleanup(accessToken, domain string) error {
+	// Получаем id домена(-ов)
 	domains, err := GetDomains(accessToken)
 	if err != nil {
 		return fmt.Errorf("Ошибка при получении доменов: %w", err)
