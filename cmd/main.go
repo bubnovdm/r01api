@@ -30,7 +30,7 @@ func main() {
 		log.Fatal("CERTBOT_DOMAIN или R01_ACCESS_TOKEN не заданы")
 	}
 
-	// Собственно, выбираем режим работы.
+	// Собственно, выбираем режим работы
 	if *auth {
 		if validation == "" {
 			log.Fatal("CERTBOT_VALIDATION не задан")
